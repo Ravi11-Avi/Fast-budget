@@ -1,0 +1,187 @@
+.chart-period {
+            color: #6c757d;
+            font-size: 0.95rem;
+        }
+        
+        .chart-stats, .trend-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin-top: 1.5rem;
+            text-align: center;
+        }
+        
+        
+        
+        .chart-stat, .trend-stat {
+            padding: 1rem;
+            background-color: #f8f9fa;
+            border-radius: 10px;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            color: #6c757d;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-value {
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+        
+        .stat-value.income {
+            color: #4cc9f0;
+        }
+        
+        .stat-value.expense {
+            color: #f72585;
+        }
+        
+        .stat-value.positive {
+            color: #4361ee;
+        }
+        
+        .category-list {
+            margin-top: 1.5rem;
+        }
+        
+        .category-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        .category-item:last-child {
+            border-bottom: none;
+        }
+        
+        .category-name {
+            flex: 1;
+        }
+        
+        .category-amount {
+            font-weight: 600;
+            margin-right: 1rem;
+        }
+        
+        .category-percentage {
+            font-weight: 600;
+            color: #4361ee;
+            width: 40px;
+            text-align: right;
+        }
+        
+        .budget-comparison {
+            margin-top: 1.5rem;
+        }
+        
+        .comparison-item {
+            margin-bottom: 1rem;
+        }
+        
+        .comparison-category {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .comparison-bar {
+            height: 8px;
+            background-color: #e9ecef;
+            border-radius: 4px;
+            margin-bottom: 0.5rem;
+            position: relative;
+        }
+        
+        .budget-bar, .actual-bar {
+            height: 100%;
+            border-radius: 4px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0.7;
+        }
+        
+        .actual-bar {
+            opacity: 1;
+        }
+        
+        .comparison-percentage {
+            font-weight: 600;
+            color: #4361ee;
+            text-align: right;
+            font-size: 0.9rem;
+        }
+        
+        .insights-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+        
+        @media (max-width: 768px) {
+            .insights-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .insight-card {
+            display: flex;
+            align-items: flex-start;
+            padding: 1.5rem;
+            border-radius: 12px;
+            border-left: 4px solid;
+        }
+        
+        .insight-card.positive {
+            background-color: rgba(76, 201, 240, 0.1);
+            border-left-color: #4cc9f0;
+        }
+        
+        .insight-card.warning {
+            background-color: rgba(248, 150, 30, 0.1);
+            border-left-color: #f8961e;
+        }
+        
+        .insight-card.info {
+            background-color: rgba(67, 97, 238, 0.1);
+            border-left-color: #4361ee;
+        }
+        
+        .insight-card.success {
+            background-color: rgba(114, 9, 183, 0.1);
+            border-left-color: #7209b7;
+        }
+        
+        .insight-icon {
+            font-size: 1.5rem;
+            margin-right: 1rem;
+            margin-top: 0.25rem;
+        }
+        
+        .insight-card.positive .insight-icon {
+            color: #4cc9f0;
+        }
+        
+        .insight-card.warning .insight-icon {
+            color: #f8961e;
+        }
+        
+        .insight-card.info .insight-icon {
+            color: #4361ee;
+        }
+        
+        .insight-card.success .insight-icon {
+            color: #7209b7;
+        }
+        
+        .insight-details h3 {
+            margin-bottom: 0.5rem;
+        }
+        
+        .insight-details p {
+            color: #6c757d;
+            font-size: 0.95rem;
+        }

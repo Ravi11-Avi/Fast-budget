@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transactions | Fast Budget</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/transations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💰</text></svg>">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="logo">
+                <div class="logo-icon">FB</div>
+                <div class="logo-text">Fast Budget</div>
+            </div>
+            
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="../index.html" class="nav-link">
+                        <i class="nav-icon fas fa-home"></i>
+                        <span>Overview</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="transactions.html" class="nav-link active">
+                        <i class="nav-icon fas fa-exchange-alt"></i>
+                        <span>Transactions</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="budgets.html" class="nav-link">
+                        <i class="nav-icon fas fa-chart-pie"></i>
+                        <span>Budgets</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="accounts.html" class="nav-link">
+                        <i class="nav-icon fas fa-credit-card"></i>
+                        <span>Accounts</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="calendar.html" class="nav-link">
+                        <i class="nav-icon fas fa-calendar-alt"></i>
+                        <span>Calendar</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="charts.html" class="nav-link">
+                        <i class="nav-icon fas fa-chart-line"></i>
+                        <span>Charts</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="settings.html" class="nav-link">
+                        <i class="nav-icon fas fa-sliders-h"></i>
+                        <span>Settings</span>
+                    </a>
+                </li>
+            </ul>
+            
+             <div class="user-profile">
+                <div class="user-avatar">
+                    <img src="image.png" alt="" style="width: 50px; border-radius: 50%;">
+                </div>
+                <div class="user-info">
+                    <h4>Avinash</h4>
+                    <p>Personal Account</p>
+                </div>
+            </div>
+        </aside>
+        
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="header">
+                <div class="menu-toggle" id="menuToggle">
+                </div>
+                <h1>Transactions</h1>
+                <div class="date-display">December 10, 2025</div>
+            </div>
+            
+            <!-- Filter Section -->
+            <div class="filter-section">
+                <h3 class="card-title">Filter Transactions</h3>
+                
+                <div class="filter-row">
+                    <div class="filter-group">
+                        <label class="filter-label">Category</label>
+                        <select class="filter-select">
+                            <option value="">All Categories</option>
+                            <option value="entertainment">Entertainment</option>
+                            <option value="eating-out">Eating Out</option>
+                            <option value="fuel">Fuel</option>
+                            <option value="shopping">Shopping</option>
+                            <option value="income">Income</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label class="filter-label">From Date</label>
+                        <input type="date" class="filter-input" value="2025-10-01">
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label class="filter-label">To Date</label>
+                        <input type="date" class="filter-input" value="2025-10-31">
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label class="filter-label">Account</label>
+                        <select class="filter-select">
+                            <option value="">All Accounts</option>
+                            <option value="wallet">Wallet</option>
+                            <option value="bank">Bank Account</option>
+                            <option value="credit-card">Credit Card</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="filter-row">
+                    <div class="filter-group">
+                        <label class="filter-label">Type</label>
+                        <select class="filter-select">
+                            <option value="">All Types</option>
+                            <option value="expense">Expenses</option>
+                            <option value="income">Income</option>
+                            <option value="transfer">Transfers</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label class="filter-label">Status</label>
+                        <select class="filter-select">
+                            <option value="">All Status</option>
+                            <option value="checked">Checked</option>
+                            <option value="not-checked">Not Checked</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label class="filter-label">Amount Min</label>
+                        <input type="number" class="filter-input" placeholder="0">
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label class="filter-label">Amount Max</label>
+                        <input type="number" class="filter-input" placeholder="1000">
+                    </div>
+                </div>
+                
+                <div class="filter-actions">
+                    <button class="btn btn-outline">
+                        <i class="btn-icon fas fa-times"></i>
+                        Clear Filters
+                    </button>
+                    <button class="btn btn-primary">
+                        <i class="btn-icon fas fa-filter"></i>
+                        Apply Filters
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Transactions Summary -->
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">October 2025 Transactions</h2>
+                    <div class="transaction-summary">
+                        <span class="total-expenses">Total Expenses: <strong>₹878.47</strong></span>
+                        <span class="total-income">Total Income: <strong>₹1,370.00</strong></span>
+                        <span class="net-balance">Net: <strong class="positive">₹491.53</strong></span>
+                    </div>
+                </div>
+                
+                <div class="card-subtitle">
+                    Showing 22 transactions from October 1 to October 26, 2025
+                </div>
+                
+                <!-- Transactions List -->
+                <ul class="transaction-list" style="margin-left: 20px;">
+                    <li class="transaction-item">
+                        <div class="transaction-icon" style="background-color: rgba(247, 37, 133, 0.1); color: #f72585;">
+                            <i class="fas fa-beer"></i>
+                        </div>
+                        <div class="transaction-details">
+                            <div class="transaction-title">Bar</div>
+                            <div class="transaction-category">Entertainment</div>
+                            <div class="transaction-account">Wallet</div>
+                        </div>
+                        <div class="transaction-amount expense">-₹42.00</div>
+                        <div class="transaction-date">25/10/2025</div>
+                    </li>
+                    
+                    <li class="transaction-item">
+                        <div class="transaction-icon" style="background-color: rgba(67, 97, 238, 0.1); color: #4361ee;">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <div class="transaction-details">
+                            <div class="transaction-title">Restaurant</div>
+                            <div class="transaction-category">Eating Out</div>
+                            <div class="transaction-account">Credit Card</div>
+                        </div>
+                        <div class="transaction-amount expense">-₹8.00</div>
+                        <div class="transaction-date">24/10/2025</div>
+                    </li>
+                    
+                    <li class="transaction-item">
+                        <div class="transaction-icon" style="background-color: rgba(76, 201, 240, 0.1); color: #4cc9f0;">
+                            <i class="fas fa-gas-pump"></i>
+                        </div>
+                        <div class="transaction-details">
+                            <div class="transaction-title">Gas Station</div>
+                            <div class="transaction-category">Fuel</div>
+                            <div class="transaction-account">Wallet</div>
+                        </div>
+                        <div class="transaction-amount expense">-₹16.00</div>
+                        <div class="transaction-date">24/10/2025</div>
+                    </li>
+                    
+                    <li class="transaction-item checked">
+                        <div class="transaction-icon" style="background-color: rgba(114, 9, 183, 0.1); color: #7209b7;">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="transaction-details">
+                            <div class="transaction-title">Pet Store</div>
+                            <div class="transaction-category">Shopping, Food - Pets</div>
+                            <div class="transaction-account">Credit Card</div>
+                        </div>
+                        <div class="transaction-amount expense">-₹50.00</div>
+                        <div class="transaction-date">23/10/2025</div>
+                    </li>
+                    
+                    <li class="transaction-item checked">
+                        <div class="transaction-icon" style="background-color: rgba(76, 201, 240, 0.1); color: #4cc9f0;">
+                            <i class="fas fa-gas-pump"></i>
+                        </div>
+                        <div class="transaction-details">
+                            <div class="transaction-title">Gas Station</div>
+                            <div class="transaction-category">Fuel</div>
+                            <div class="transaction-account">Wallet</div>
+                        </div>
+                        <div class="transaction-amount expense">-₹30.00</div>
+                        <div class="transaction-date">22/10/2025</div>
+                    </li>
+                    
+                    <li class="transaction-item checked">
+                        <div class="transaction-icon" style="background-color: rgba(114, 9, 183, 0.1); color: #7209b7;">
+                            <i class="fas fa-tshirt"></i>
+                        </div>
+                        <div class="transaction-details">
+                            <div class="transaction-title">Clothing Store</div>
+                            <div class="transaction-category">Shows, Clothing</div>
+                            <div class="transaction-account">Credit Card</div>
+                        </div>
+                        <div class="transaction-amount expense">-₹74.00</div>
+                        <div class="transaction-date">21/10/2025</div>
+                    </li>
+                    
+                    <li class="transaction-item checked">
+                        <div class="transaction-icon" style="background-color: rgba(67, 97, 238, 0.1); color: #4361ee;">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <div class="transaction-details">
+                            <div class="transaction-title">Restaurant</div>
+                            <div class="transaction-category">Eating Out</div>
+                            <div class="transaction-account">Wallet</div>
+                        </div>
+                        <div class="transaction-amount expense">-₹13.50</div>
+                        <div class="transaction-date">20/10/2025</div>
+                    </li>
+                    
+                    <li class="transaction-item checked">
+                        <div class="transaction-icon" style="background-color: rgba(248, 150, 30, 0.1); color: #f8961e;">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <div class="transaction-details">
+                            <div class="transaction-title">Odd Jobs</div>
+                            <div class="transaction-category">Income - Odd Jobs</div>
+                            <div class="transaction-account">Bank Account</div>
+                        </div>
+                        <div class="transaction-amount income">+₹80.00</div>
+                        <div class="transaction-date">20/10/2025</div>
+                    </li>
+                    
+                    <li class="transaction-item checked">
+                        <div class="transaction-icon" style="background-color: rgba(67, 97, 238, 0.1); color: #4361ee;">
+                            <i class="fas fa-laptop"></i>
+                        </div>
+                        <div class="transaction-details">
+                            <div class="transaction-title">Computer Store</div>
+                            <div class="transaction-category">Technology</div>
+                            <div class="transaction-account">Bank Account</div>
+                        </div>
+                        <div class="transaction-amount expense">-₹120.00</div>
+                        <div class="transaction-date">19/10/2025</div>
+                    </li>
+                    
+                    <li class="transaction-item checked">
+                        <div class="transaction-icon" style="background-color: rgba(247, 37, 133, 0.1); color: #f72585;">
+                            <i class="fas fa-beer"></i>
+                        </div>
+                        <div class="transaction-details">
+                            <div class="transaction-title">Bar</div>
+                            <div class="transaction-category">Entertainment</div>
+                            <div class="transaction-account">Wallet</div>
+                        </div>
+                        <div class="transaction-amount expense">-₹2.50</div>
+                        <div class="transaction-date">18/10/2025</div>
+                    </li>
+                    
+                    <li class="transaction-item checked">
+                        <div class="transaction-icon" style="background-color: rgba(114, 9, 183, 0.1); color: #7209b7;">
+                            <i class="fas fa-gift"></i>
+                        </div>
+                        <div class="transaction-details">
+                            <div class="transaction-title">Gift Shop</div>
+                            <div class="transaction-category">Gifts</div>
+                            <div class="transaction-account">Credit Card</div>
+                        </div>
+                        <div class="transaction-amount expense">-₹15.00</div>
+                        <div class="transaction-date">17/10/2025</div>
+                    </li>
+                    
+                    <li class="transaction-item checked">
+                        <div class="transaction-icon" style="background-color: rgba(67, 97, 238, 0.1); color: #4361ee;">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <div class="transaction-details">
+                            <div class="transaction-title">Fast Food</div>
+                            <div class="transaction-category">Eating Out</div>
+                            <div class="transaction-account">Wallet</div>
+                        </div>
+                        <div class="transaction-amount expense">-₹8.00</div>
+                        <div class="transaction-date">16/10/2025</div>
+                    </li>
+                    
+                    <li class="transaction-item checked">
+                        <div class="transaction-icon" style="background-color: rgba(67, 97, 238, 0.1); color: #4361ee;">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <div class="transaction-details">
+                            <div class="transaction-title">Bookstore</div>
+                            <div class="transaction-category">Books & Magazines</div>
+                            <div class="transaction-account">Wallet</div>
+                        </div>
+                        <div class="transaction-amount expense">-₹3.00</div>
+                        <div class="transaction-date">15/10/2025</div>
+                    </li>
+                    
+                    <li class="transaction-item checked">
+                        <div class="transaction-icon" style="background-color: rgba(76, 201, 240, 0.1); color: #4cc9f0;">
+                            <i class="fas fa-money-check-alt"></i>
+                        </div>
+                        <div class="transaction-details">
+                            <div class="transaction-title">Salary Deposit</div>
+                            <div class="transaction-category">Salary</div>
+                            <div class="transaction-account">Bank Account</div>
+                        </div>
+                        <div class="transaction-amount income">+₹1,370.00</div>
+                        <div class="transaction-date">15/10/2025</div>
+                    </li>
+                </ul>
+                
+                <!-- Pagination -->
+                <div class="pagination">
+                    <button class="btn btn-outline btn-sm">
+                        <i class="fas fa-chevron-left"></i>
+                        Previous
+                    </button>
+                    <span class="page-info">Page 1 of 3</span>
+                    <button class="btn btn-outline btn-sm">
+                        Next
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Import/Export Section -->
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">Import & Export</h2>
+                </div>
+                
+                <div class="import-export-options">
+                    <div class="option">
+                        <div class="option-icon">
+                            <i class="fas fa-file-import"></i>
+                        </div>
+                        <div class="option-details">
+                            <h4>Import Transactions</h4>
+                            <p>Upload CSV, Excel, or OFX files to import transactions</p>
+                        </div>
+                        <button class="btn btn-outline">
+                            <i class="fas fa-upload"></i>
+                            Import
+                        </button>
+                    </div>
+                    
+                    <div class="option">
+                        <div class="option-icon">
+                            <i class="fas fa-file-export"></i>
+                        </div>
+                        <div class="option-details">
+                            <h4>Export Transactions</h4>
+                            <p>Download your transaction history as CSV or PDF</p>
+                        </div>
+                        <button class="btn btn-outline">
+                            <i class="fas fa-download"></i>
+                            Export
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar | Fast Budget</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/calender.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💰</text></svg>">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="logo">
+                <div class="logo-icon">FB</div>
+                <div class="logo-text">Fast Budget</div>
+            </div>
+            
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="../index.html" class="nav-link">
+                        <i class="nav-icon fas fa-home"></i>
+                        <span>Overview</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="transactions.html" class="nav-link">
+                        <i class="nav-icon fas fa-exchange-alt"></i>
+                        <span>Transactions</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="budgets.html" class="nav-link">
+                        <i class="nav-icon fas fa-chart-pie"></i>
+                        <span>Budgets</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="accounts.html" class="nav-link">
+                        <i class="nav-icon fas fa-credit-card"></i>
+                        <span>Accounts</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="calendar.html" class="nav-link active">
+                        <i class="nav-icon fas fa-calendar-alt"></i>
+                        <span>Calendar</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="charts.html" class="nav-link">
+                        <i class="nav-icon fas fa-chart-line"></i>
+                        <span>Charts</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="settings.html" class="nav-link">
+                        <i class="nav-icon fas fa-sliders-h"></i>
+                        <span>Settings</span>
+                    </a>
+                </li>
+            </ul>
+            
+            <div class="user-profile">
+                <div class="user-avatar">
+                    <img src="image.png" alt="User Avatar" style="width: 50px; border-radius: 50%;">
+                </div>
+                <div class="user-info">
+                    <h4>Avinash</h4>
+                    <p>Personal Account</p>
+                </div>
+            </div>
+        </aside>
+        
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="header">
+                <div class="menu-toggle" id="menuToggle">
+                </div>
+                <h1>Calendar</h1>
+                <div class="date-display">December 10, 2025</div>
+            </div>
+            
+            <!-- Calendar Navigation -->
+            <div class="card">
+                <div class="calendar-header">
+                    <div class="calendar-nav">
+                        <button class="btn btn-outline">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <h2 class="calendar-month-year">December 2025</h2>
+                        <button class="btn btn-outline">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                    <div>
+                        <button class="btn btn-primary">
+                            <i class="fas fa-plus btn-icon"></i>
+                            Add Event
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Calendar Grid -->
+                <div class="calendar-grid">
+                    <!-- Day Headers -->
+                    <div class="calendar-day-header">Sun</div>
+                    <div class="calendar-day-header">Mon</div>
+                    <div class="calendar-day-header">Tue</div>
+                    <div class="calendar-day-header">Wed</div>
+                    <div class="calendar-day-header">Thu</div>
+                    <div class="calendar-day-header">Fri</div>
+                    <div class="calendar-day-header">Sat</div>
+                    
+                    <!-- Empty days (November) -->
+                    <div class="calendar-day empty">30</div>
+                    
+                    <!-- December Days -->
+                    <div class="calendar-day">
+                        <div class="calendar-day-number">1</div>
+                        <div class="calendar-event income">
+                            <div class="calendar-event-details">
+                                <span>Salary</span>
+                                <span class="calendar-event-amount">+₹1,370</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="calendar-day">
+                        <div class="calendar-day-number">2</div>
+                    </div>
+                    
+                    <div class="calendar-day">
+                        <div class="calendar-day-number">3</div>
+                        <div class="calendar-event expense">
+                            <div class="calendar-event-details">
+                                <span>Shopping</span>
+                                <span class="calendar-event-amount">-₹120</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="calendar-day">
+                        <div class="calendar-day-number">4</div>
+                    </div>
+                    
+                    <div class="calendar-day">
+                        <div class="calendar-day-number">5</div>
+                        <div class="calendar-event expense">
+                            <div class="calendar-event-details">
+                                <span>Dinner</span>
+                                <span class="calendar-event-amount">-₹45</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="calendar-day">
+                        <div class="calendar-day-number">6</div>
+                    </div>
+                    
+                    <div class="calendar-day">
+                        <div class="calendar-day-number">7</div>
+                    </div>
+                    
+                    <div class="calendar-day">
+                        <div class="calendar-day-number">8</div>
+                        <div class="calendar-event expense">
+                            <div class="calendar-event-details">
+                                <span>Fuel</span>
+                                <span class="calendar-event-amount">-₹60</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="calendar-day">
+                        <div class="calendar-day-number">9</div>
+                    </div>
+                    
+                    <div class="calendar-day">
+                        <div class="calendar-day-number">10</div>
+                        <div class="calendar-event important">Today</div>
+                        <div class="calendar-event expense">
+                            <div class="calendar-event-details">
+                                <span>Groceries</span>
+                                <span class="calendar-event-amount">-₹85</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="calendar-day">
+                        <div class="calendar-day-number">11</div>
+                    </div>
+                    
+                    <div class="calendar-day">
+                        <div class="calendar-day-number">12</div>
+                    </div>
+                    
+                    <div class="calendar-day">
+                        <div class="calendar-day-number">13</div>
+                        <div class="calendar-event expense">
+                            <div class="calendar-event-details">
+                                <span>Entertainment</span>
+                                <span class="calendar-event-amount">-₹35</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="calendar-day">
+                        <div class="calendar-day-number">14</div>
+                    </div>
+                    
+                    <div class="calendar-day">
+                        <div class="calendar-day-number">15</div>
+                        <div class="calendar-event income">
+                            <div class="calendar-event-details">
+                                <span>Freelance</span>
+                                <span class="calendar-event-amount">+₹200</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="calendar-day">
+                        <div class="calendar-day-number">16</div>
+                    </div>
+                    
+                    <div class="calendar-day">
+                        <div class="calendar-day-number">17</div>
+                    </div>
+                    
+                    <div class="calendar-day">
+                        <div class="calendar-day-number">18</div>
+                    </div>
+                    
+                    <div class="calendar-day">
+                        <div class="calendar-day-number">19</div>
+                        <div class="calendar-event expense">
+                            <div class="calendar-event-details">
+                                <span>Shopping</span>
+                                <span class="calendar-event-amount">-₹150</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="calendar-day">
+                        <div class="calendar-day-number">20</div>
+                    </div>
+                    
+                    <div class="calendar-day">
+                        <div class="calendar-day-number">21</div>
+                    </div>
+                    
+                    <div class="calendar-day">
+                        <div class="calendar-day-number">22</div>
+                    </div>
+                    
+                    <div class="calendar-day">
+                        <div class="calendar-day-number">23</div>
+                    </div>
+                    
+                    <div class="calendar-day">
+                        <div class="calendar-day-number">24</div>
+                    </div>
+                    
+                    <div class="calendar-day">
+                        <div class="calendar-day-number">25</div>
+                        <div class="calendar-event expense">
+                            <div class="calendar-event-details">
+                                <span>Christmas</span>
+                                <span class="calendar-event-amount">-₹100</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="calendar-day">
+                        <div class="calendar-day-number">26</div>
+                    </div>
+                    
+                    <div class="calendar-day">
+                        <div class="calendar-day-number">27</div>
+                    </div>
+                    
+                    <div class="calendar-day">
+                        <div class="calendar-day-number">28</div>
+                    </div>
+                    
+                    <div class="calendar-day">
+                        <div class="calendar-day-number">29</div>
+                    </div>
+                    
+                    <div class="calendar-day">
+                        <div class="calendar-day-number">30</div>
+                    </div>
+                    
+                    <div class="calendar-day">
+                        <div class="calendar-day-number">31</div>
+                        <div class="calendar-event expense">
+                            <div class="calendar-event-details">
+                                <span>New Year Eve</span>
+                                <span class="calendar-event-amount">-₹75</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Upcoming Events -->
+                <div class="card-header">
+                    <h2 class="card-title">Upcoming Financial Events</h2>
+                </div>
+                
+                <div class="upcoming-events">
+                    <div class="event-item">
+                        <div class="event-date">
+                            <div class="event-day">15</div>
+                            <div class="event-month">Dec</div>
+                        </div>
+                        <div class="event-details">
+                            <div class="event-title">Credit Card Payment Due</div>
+                            <div class="event-description">Visa ending in 1234</div>
+                        </div>
+                        <div class="event-amount">-₹5,200</div>
+                    </div>
+                    
+                    <div class="event-item">
+                        <div class="event-date">
+                            <div class="event-day">25</div>
+                            <div class="event-month">Dec</div>
+                        </div>
+                        <div class="event-details">
+                            <div class="event-title">Electricity Bill</div>
+                            <div class="event-description">Monthly utility payment</div>
+                        </div>
+                        <div class="event-amount">-₹1,200</div>
+                    </div>
+                    
+                    <div class="event-item">
+                        <div class="event-date">
+                            <div class="event-day">01</div>
+                            <div class="event-month">Jan</div>
+                        </div>
+                        <div class="event-details">
+                            <div class="event-title">Rent Payment</div>
+                            <div class="event-description">Monthly rent</div>
+                        </div>
+                        <div class="event-amount">-₹12,000</div>
+                    </div>
+                    
+                    <div class="event-item">
+                        <div class="event-date">
+                            <div class="event-day">05</div>
+                            <div class="event-month">Jan</div>
+                        </div>
+                        <div class="event-details">
+                            <div class="event-title">Salary Deposit</div>
+                            <div class="event-description">Monthly salary</div>
+                        </div>
+                        <div class="event-amount">+₹45,000</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Monthly Summary -->
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">December 2025 Summary</h2>
+                </div>
+                
+                <div class="summary-stats">
+                    <div class="stat-item">
+                        <div class="stat-label">Total Income</div>
+                        <div class="stat-value income">₹2,570</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-label">Total Expenses</div>
+                        <div class="stat-value expense">₹1,870</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-label">Net Balance</div>
+                        <div class="stat-value positive">₹700</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-label">Transactions</div>
+                        <div class="stat-value">18</div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+</body>
+</html>
