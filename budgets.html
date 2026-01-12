@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budgets | Fast Budget</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="budgets.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💰</text></svg>">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="logo">
+                <div class="logo-icon">FB</div>
+                <div class="logo-text">Fast Budget</div>
+            </div>
+            
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">
+                        <i class="nav-icon fas fa-home"></i>
+                        <span>Overview</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="transactions.html" class="nav-link">
+                        <i class="nav-icon fas fa-exchange-alt"></i>
+                        <span>Transactions</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="budgets.html" class="nav-link active">
+                        <i class="nav-icon fas fa-chart-pie"></i>
+                        <span>Budgets</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="accounts.html" class="nav-link">
+                        <i class="nav-icon fas fa-credit-card"></i>
+                        <span>Accounts</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="calendar.html" class="nav-link">
+                        <i class="nav-icon fas fa-calendar-alt"></i>
+                        <span>Calendar</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="charts.html" class="nav-link">
+                        <i class="nav-icon fas fa-chart-line"></i>
+                        <span>Charts</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="settings.html" class="nav-link">
+                        <i class="nav-icon fas fa-sliders-h"></i>
+                        <span>Settings</span>
+                    </a>
+                </li>
+            </ul>
+            
+            <div class="user-profile">
+                <div class="user-avatar">
+                    <img src="image.png" alt="" style="width: 50px; border-radius: 50%;">
+                </div>
+                <div class="user-info">
+                    <h4>Avinash</h4>
+                    <p>Personal Account</p>
+                </div>
+            </div>
+        </aside>
+        
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="header">
+                <div class="menu-toggle" id="menuToggle">
+                </div>
+                <h1>Budgets</h1>
+                <div class="date-display">December 10, 2025</div>
+            </div>
+            
+            <!-- Budget Actions -->
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">Manage Your Budgets</h2>
+                    <button class="btn btn-primary">
+                        <i class="btn-icon fas fa-plus"></i>
+                        Add New Budget
+                    </button>
+                </div>
+                
+                <div class="card-subtitle">
+                    Track your spending against budgets for different categories and time periods.
+                </div>
+            </div>
+            
+            <!-- Weekly Budgets -->
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">Weekly Budgets</h2>
+                    <div class="budget-period">10/26/2025 - 11/01/2025</div>
+                </div>
+                
+                <div class="budget-category">
+                    <div class="budget-header">
+                        <div>
+                            <span class="budget-name">Entertainment</span>
+                            <span class="budget-status active">Active</span>
+                        </div>
+                        <span class="budget-percentage">67%</span>
+                    </div>
+                    <div class="budget-dates">10/26/2025 - 11/01/2025</div>
+                    <div class="progress-container">
+                        <div class="progress-bar" style="width: 67%;"></div>
+                    </div>
+                    <div class="budget-amounts">
+                        <span>Spent: ₹40.00</span>
+                        <span>Budget: ₹60.00</span>
+                        <span class="residual-amount">Residual: ₹20.00</span>
+                    </div>
+                    <div class="budget-actions">
+                        <button class="btn btn-outline btn-sm">
+                            <i class="fas fa-edit"></i>
+                            Edit
+                        </button>
+                        <button class="btn btn-outline btn-sm">
+                            <i class="fas fa-chart-bar"></i>
+                            Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Monthly Budgets -->
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">Monthly Budgets</h2>
+                    <div class="budget-period">October 2025</div>
+                </div>
+                
+                <div class="budget-category">
+                    <div class="budget-header">
+                        <div>
+                            <span class="budget-name">All Categories</span>
+                            <span class="budget-status warning">Almost Used Up</span>
+                        </div>
+                        <span class="budget-percentage">98%</span>
+                    </div>
+                    <div class="budget-dates">10/01/2025 - 10/31/2025</div>
+                    <div class="progress-container">
+                        <div class="progress-bar" style="width: 98%; background: linear-gradient(90deg, #f72585, #7209b7);"></div>
+                    </div>
+                    <div class="budget-amounts">
+                        <span>Spent: ₹1,960.24</span>
+                        <span>Budget: ₹2,000.00</span>
+                        <span class="residual-amount warning">Residual: ₹39.76</span>
+                    </div>
+                    <div class="budget-actions">
+                        <button class="btn btn-outline btn-sm">
+                            <i class="fas fa-edit"></i>
+                            Edit
+                        </button>
+                        <button class="btn btn-outline btn-sm">
+                            <i class="fas fa-chart-bar"></i>
+                            Details
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="budget-category">
+                    <div class="budget-header">
+                        <div>
+                            <span class="budget-name">Fuel</span>
+                            <span class="budget-status active">Active</span>
+                        </div>
+                        <span class="budget-percentage">75%</span>
+                    </div>
+                    <div class="budget-dates">10/01/2025 - 10/31/2025</div>
+                    <div class="progress-container">
+                        <div class="progress-bar" style="width: 75%;"></div>
+                    </div>
+                    <div class="budget-amounts">
+                        <span>Spent: ₹150.00</span>
+                        <span>Budget: ₹200.00</span>
+                        <span class="residual-amount">Residual: ₹50.00</span>
+                    </div>
+                    <div class="budget-actions">
+                        <button class="btn btn-outline btn-sm">
+                            <i class="fas fa-edit"></i>
+                            Edit
+                        </button>
+                        <button class="btn btn-outline btn-sm">
+                            <i class="fas fa-chart-bar"></i>
+                            Details
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="budget-category">
+                    <div class="budget-header">
+                        <div>
+                            <span class="budget-name">Eating Out</span>
+                            <span class="budget-status active">Active</span>
+                        </div>
+                        <span class="budget-percentage">60%</span>
+                    </div>
+                    <div class="budget-dates">10/01/2025 - 10/31/2025</div>
+                    <div class="progress-container">
+                        <div class="progress-bar" style="width: 60%;"></div>
+                    </div>
+                    <div class="budget-amounts">
+                        <span>Spent: ₹90.00</span>
+                        <span>Budget: ₹150.00</span>
+                        <span class="residual-amount">Residual: ₹60.00</span>
+                    </div>
+                    <div class="budget-actions">
+                        <button class="btn btn-outline btn-sm">
+                            <i class="fas fa-edit"></i>
+                            Edit
+                        </button>
+                        <button class="btn btn-outline btn-sm">
+                            <i class="fas fa-chart-bar"></i>
+                            Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Yearly Budgets -->
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">Yearly Budgets</h2>
+                    <div class="budget-period">2025</div>
+                </div>
+                
+                <div class="budget-category">
+                    <div class="budget-header">
+                        <div>
+                            <span class="budget-name">Clothing</span>
+                            <span class="budget-status active">Active</span>
+                        </div>
+                        <span class="budget-percentage">36%</span>
+                    </div>
+                    <div class="budget-dates">01/01/2025 - 12/31/2025</div>
+                    <div class="progress-container">
+                        <div class="progress-bar" style="width: 36%;"></div>
+                    </div>
+                    <div class="budget-amounts">
+                        <span>Spent: ₹180.00</span>
+                        <span>Budget: ₹500.00</span>
+                        <span class="residual-amount">Residual: ₹320.00</span>
+                    </div>
+                    <div class="budget-actions">
+                        <button class="btn btn-outline btn-sm">
+                            <i class="fas fa-edit"></i>
+                            Edit
+                        </button>
+                        <button class="btn btn-outline btn-sm">
+                            <i class="fas fa-chart-bar"></i>
+                            Details
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="budget-category">
+                    <div class="budget-header">
+                        <div>
+                            <span class="budget-name">Shoes</span>
+                            <span class="budget-status active">Active</span>
+                        </div>
+                        <span class="budget-percentage">30%</span>
+                    </div>
+                    <div class="budget-dates">01/01/2025 - 12/31/2025</div>
+                    <div class="progress-container">
+                        <div class="progress-bar" style="width: 30%;"></div>
+                    </div>
+                    <div class="budget-amounts">
+                        <span>Spent: ₹120.00</span>
+                        <span>Budget: ₹400.00</span>
+                        <span class="residual-amount">Residual: ₹280.00</span>
+                    </div>
+                    <div class="budget-actions">
+                        <button class="btn btn-outline btn-sm">
+                            <i class="fas fa-edit"></i>
+                            Edit
+                        </button>
+                        <button class="btn btn-outline btn-sm">
+                            <i class="fas fa-chart-bar"></i>
+                            Details
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Inactive Budget Example -->
+                <div class="budget-category inactive">
+                    <div class="budget-header">
+                        <div>
+                            <span class="budget-name">Technology</span>
+                            <span class="budget-status inactive">Inactive</span>
+                        </div>
+                        <span class="budget-percentage">0%</span>
+                    </div>
+                    <div class="budget-dates">No active period</div>
+                    <div class="progress-container">
+                        <div class="progress-bar" style="width: 0%;"></div>
+                    </div>
+                    <div class="budget-amounts">
+                        <span>Spent: ₹0.00</span>
+                        <span>Budget: ₹1,000.00</span>
+                        <span class="residual-amount">Residual: ₹1,000.00</span>
+                    </div>
+                    <div class="budget-actions">
+                        <button class="btn btn-outline btn-sm">
+                            <i class="fas fa-play"></i>
+                            Activate
+                        </button>
+                        <button class="btn btn-outline btn-sm">
+                            <i class="fas fa-edit"></i>
+                            Edit
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

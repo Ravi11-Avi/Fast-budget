@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fast Budget | Personal Finance Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💰</text></svg>">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="logo">
+                <div class="logo-icon">FB</div>
+                <div class="logo-text">Fast Budget</div>
+            </div>
+            
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link active">
+                        <i class="nav-icon fas fa-home"></i>
+                        <span>Overview</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="transactions.html" class="nav-link">
+                        <i class="nav-icon fas fa-exchange-alt"></i>
+                        <span>Transactions</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="budgets.html" class="nav-link">
+                        <i class="nav-icon fas fa-chart-pie"></i>
+                        <span>Budgets</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="accounts.html" class="nav-link">
+                        <i class="nav-icon fas fa-credit-card"></i>
+                        <span>Accounts</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="calendar.html" class="nav-link">
+                        <i class="nav-icon fas fa-calendar-alt"></i>
+                        <span>Calendar</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="charts.html" class="nav-link">
+                        <i class="nav-icon fas fa-chart-line"></i>
+                        <span>Charts</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="settings.html" class="nav-link">
+                        <i class="nav-icon fas fa-sliders-h"></i>
+                        <span>Settings</span>
+                    </a>
+                </li>
+            </ul>
+            
+            <div class="user-profile">
+                <div class="user-avatar">
+                    <img src="image.png" alt="" style="width: 50px; border-radius: 50%;">
+                </div>
+                <div class="user-info">
+                    <h4>Avinash</h4>
+                    <p>Personal Account</p>
+                </div>
+            </div>
+        </aside>
+        
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="header">
+                <div class="menu-toggle" id="menuToggle">
+                </div>
+                <h1>Overview</h1>
+                <div class="date-display">December 10, 2025</div>
+            </div>
+            
+            <!-- Summary Cards -->
+            <div class="summary-grid">
+                <div class="summary-card">
+                    <div class="summary-icon balance">
+                        <i class="fas fa-wallet"></i>
+                    </div>
+                    <div class="summary-details">
+                        <h3>₹13,627.71</h3>
+                        <p>Total Balance</p>
+                    </div>
+                </div>
+                
+                <div class="summary-card">
+                    <div class="summary-icon income">
+                        <i class="fas fa-arrow-down"></i>
+                    </div>
+                    <div class="summary-details">
+                        <h3>₹1,370.00</h3>
+                        <p>Monthly Income</p>
+                    </div>
+                </div>
+                
+                <div class="summary-card">
+                    <div class="summary-icon expenses">
+                        <i class="fas fa-arrow-up"></i>
+                    </div>
+                    <div class="summary-details">
+                        <h3>₹878.47</h3>
+                        <p>Monthly Expenses</p>
+                    </div>
+                </div>
+                
+                <div class="summary-card">
+                    <div class="summary-icon savings">
+                        <i class="fas fa-piggy-bank"></i>
+                    </div>
+                    <div class="summary-details">
+                        <h3>₹491.53</h3>
+                        <p>Monthly Savings</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="content-grid">
+                <!-- Left Column -->
+                <div class="content-column">
+                    <!-- Recent Transactions -->
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="card-title">Recent Transactions</h2>
+                            <a href="transactions.html" class="btn btn-outline">
+                                <i class="btn-icon fas fa-eye"></i>
+                                View All
+                            </a>
+                        </div>
+                        
+                        <ul class="transaction-list">
+                            <li class="transaction-item">
+                                <div class="transaction-icon" style="background-color: rgba(247, 37, 133, 0.1); color: #f72585;">
+                                    <i class="fas fa-beer"></i>
+                                </div>
+                                <div class="transaction-details">
+                                    <div class="transaction-title">Bar</div>
+                                    <div class="transaction-category">Entertainment</div>
+                                    <div class="transaction-account">Wallet</div>
+                                </div>
+                                <div class="transaction-amount expense">-₹42.00</div>
+                                <div class="transaction-date">25/10/2025</div>
+                            </li>
+                            
+                            <li class="transaction-item">
+                                <div class="transaction-icon" style="background-color: rgba(67, 97, 238, 0.1); color: #4361ee;">
+                                    <i class="fas fa-utensils"></i>
+                                </div>
+                                <div class="transaction-details">
+                                    <div class="transaction-title">Restaurant</div>
+                                    <div class="transaction-category">Eating Out</div>
+                                    <div class="transaction-account">Credit Card</div>
+                                </div>
+                                <div class="transaction-amount expense">-₹36.50</div>
+                                <div class="transaction-date">24/10/2025</div>
+                            </li>
+                            
+                            <li class="transaction-item">
+                                <div class="transaction-icon" style="background-color: rgba(76, 201, 240, 0.1); color: #4cc9f0;">
+                                    <i class="fas fa-gas-pump"></i>
+                                </div>
+                                <div class="transaction-details">
+                                    <div class="transaction-title">Gas Station</div>
+                                    <div class="transaction-category">Fuel</div>
+                                    <div class="transaction-account">Wallet</div>
+                                </div>
+                                <div class="transaction-amount expense">-₹50.00</div>
+                                <div class="transaction-date">23/10/2025</div>
+                            </li>
+                            
+                            <li class="transaction-item">
+                                <div class="transaction-icon" style="background-color: rgba(114, 9, 183, 0.1); color: #7209b7;">
+                                    <i class="fas fa-t-shirt"></i>
+                                </div>
+                                <div class="transaction-details">
+                                    <div class="transaction-title">Clothing Store</div>
+                                    <div class="transaction-category">Shopping</div>
+                                    <div class="transaction-account">Credit Card</div>
+                                </div>
+                                <div class="transaction-amount expense">-₹74.00</div>
+                                <div class="transaction-date">22/10/2025</div>
+                            </li>
+                            
+                            <li class="transaction-item">
+                                <div class="transaction-icon" style="background-color: rgba(76, 201, 240, 0.1); color: #4cc9f0;">
+                                    <i class="fas fa-money-check-alt"></i>
+                                </div>
+                                <div class="transaction-details">
+                                    <div class="transaction-title">Salary Deposit</div>
+                                    <div class="transaction-category">Income</div>
+                                    <div class="transaction-account">Bank Account</div>
+                                </div>
+                                <div class="transaction-amount income">+₹1,370.00</div>
+                                <div class="transaction-date">20/10/2025</div>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Cash Flow Chart Placeholder -->
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="card-title">Cash Flow</h2>
+                            <div class="period-tabs">
+                                <div class="period-tab active">Week</div>
+                                <div class="period-tab">Month</div>
+                                <div class="period-tab">Year</div>
+                            </div>
+                        </div>
+                        
+                        <div class="chart-container">
+                            <div class="chart-placeholder">
+                                <i class="fas fa-chart-bar" style="font-size: 3rem; margin-bottom: 1rem;"></i>
+                                <p>Cash flow chart visualization</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right Column -->
+                <div class="content-column">
+                    <!-- Active Budgets -->
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="card-title">Active Budgets</h2>
+                            <a href="budgets.html" class="btn btn-outline">
+                                <i class="btn-icon fas fa-cog"></i>
+                                Manage
+                            </a>
+                        </div>
+                        
+                        <div class="budget-section">
+                            <h3 class="section-title">Weekly</h3>
+                            
+                            <div class="budget-category">
+                                <div class="budget-header">
+                                    <span class="budget-name">Entertainment</span>
+                                    <span class="budget-percentage">67%</span>
+                                </div>
+                                <div class="budget-dates">10/26/2025 - 11/01/2025</div>
+                                <div class="progress-container">
+                                    <div class="progress-bar" style="width: 67%;"></div>
+                                </div>
+                                <div class="budget-amounts">
+                                    <span>₹0.00</span>
+                                    <span>₹40.00 / ₹60.00</span>
+                                    <span class="residual-amount">Residual: ₹20.00</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="budget-section">
+                            <h3 class="section-title">Monthly</h3>
+                            
+                            <div class="budget-category">
+                                <div class="budget-header">
+                                    <span class="budget-name">All Categories</span>
+                                    <span class="budget-percentage">98%</span>
+                                </div>
+                                <div class="budget-dates">10/01/2025 - 10/31/2025</div>
+                                <div class="progress-container">
+                                    <div class="progress-bar" style="width: 98%;"></div>
+                                </div>
+                                <div class="budget-amounts">
+                                    <span>₹0.00</span>
+                                    <span>₹1,960.24 / ₹2,000.00</span>
+                                    <span class="residual-amount">Residual: ₹39.76</span>
+                                </div>
+                            </div>
+                            
+                            <div class="budget-category">
+                                <div class="budget-header">
+                                    <span class="budget-name">Fuel</span>
+                                    <span class="budget-percentage">75%</span>
+                                </div>
+                                <div class="budget-dates">10/01/2025 - 10/31/2025</div>
+                                <div class="progress-container">
+                                    <div class="progress-bar" style="width: 75%;"></div>
+                                </div>
+                                <div class="budget-amounts">
+                                    <span>₹0.00</span>
+                                    <span>₹150.00 / ₹200.00</span>
+                                    <span class="residual-amount">Residual: ₹50.00</span>
+                                </div>
+                            </div>
+                            
+                            <div class="budget-category">
+                                <div class="budget-header">
+                                    <span class="budget-name">Eating Out</span>
+                                    <span class="budget-percentage">60%</span>
+                                </div>
+                                <div class="budget-dates">10/01/2025 - 10/31/2025</div>
+                                <div class="progress-container">
+                                    <div class="progress-bar" style="width: 60%;"></div>
+                                </div>
+                                <div class="budget-amounts">
+                                    <span>₹0.00</span>
+                                    <span>₹90.00 / ₹150.00</span>
+                                    <span class="residual-amount">Residual: ₹60.00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Accounts Summary -->
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="card-title">Accounts</h2>
+                        </div>
+                        
+                        <div class="accounts-list">
+                            <div class="account-item">
+                                <div class="account-info">
+                                    <div class="account-icon">
+                                        <i class="fas fa-wallet" style="color: #4361ee;"></i>
+                                    </div>
+                                    <div>
+                                        <div class="account-name">Wallet</div>
+                                        <div class="account-type">Cash</div>
+                                    </div>
+                                </div>
+                                <div class="account-balance">₹185.24</div>
+                            </div>
+                            
+                            <div class="account-item">
+                                <div class="account-info">
+                                    <div class="account-icon">
+                                        <i class="fas fa-university" style="color: #4cc9f0;"></i>
+                                    </div>
+                                    <div>
+                                        <div class="account-name">Bank Account</div>
+                                        <div class="account-type">Checking</div>
+                                    </div>
+                                </div>
+                                <div class="account-balance">₹13,442.47</div>
+                            </div>
+                            
+                            <div class="account-item">
+                                <div class="account-info">
+                                    <div class="account-icon">
+                                        <i class="fas fa-credit-card" style="color: #f72585;"></i>
+                                    </div>
+                                    <div>
+                                        <div class="account-name">Credit Card</div>
+                                        <div class="account-type">Visa</div>
+                                    </div>
+                                </div>
+                                <div class="account-balance">-₹248.00</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+
+</body>
+</html>

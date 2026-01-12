@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charts | Fast Budget</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="charts.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💰</text></svg>">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="logo">
+                <div class="logo-icon">FB</div>
+                <div class="logo-text">Fast Budget</div>
+            </div>
+            
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">
+                        <i class="nav-icon fas fa-home"></i>
+                        <span>Overview</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="transactions.html" class="nav-link">
+                        <i class="nav-icon fas fa-exchange-alt"></i>
+                        <span>Transactions</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="budgets.html" class="nav-link">
+                        <i class="nav-icon fas fa-chart-pie"></i>
+                        <span>Budgets</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="accounts.html" class="nav-link">
+                        <i class="nav-icon fas fa-credit-card"></i>
+                        <span>Accounts</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="calendar.html" class="nav-link">
+                        <i class="nav-icon fas fa-calendar-alt"></i>
+                        <span>Calendar</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="charts.html" class="nav-link active">
+                        <i class="nav-icon fas fa-chart-line"></i>
+                        <span>Charts</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="settings.html" class="nav-link">
+                        <i class="nav-icon fas fa-sliders-h"></i>
+                        <span>Settings</span>
+                    </a>
+                </li>
+            </ul>
+            
+            <div class="user-profile">
+                <div class="user-avatar">
+                    <img src="image.png" alt="User Avatar" style="width: 50px; border-radius: 50%;">
+                </div>
+                <div class="user-info">
+                    <h4>Avinash</h4>
+                    <p>Personal Account</p>
+                </div>
+            </div>
+        </aside>
+        
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="header">
+                <div class="menu-toggle" id="menuToggle">
+                </div>
+                <h1>Charts & Analytics</h1>
+                <div class="date-display">December 10, 2025</div>
+            </div>
+            
+            <!-- Chart Period Selection -->
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">Select Time Period</h2>
+                </div>
+                
+                <div class="period-tabs">
+                    <div class="period-tab active">Last 7 Days</div>
+                    <div class="period-tab">Last 30 Days</div>
+                    <div class="period-tab">This Month</div>
+                    <div class="period-tab">Last Month</div>
+                    <div class="period-tab">This Year</div>
+                    <div class="period-tab">Custom</div>
+                </div>
+            </div>
+            
+            <!-- Charts Grid -->
+            <div class="charts-grid">
+                <!-- Income vs Expenses Chart -->
+                <div class="chart-card">
+                    <div class="card-header">
+                        <h2 class="card-title">Income vs Expenses</h2>
+                        <div class="chart-period">December 2025</div>
+                    </div>
+                    
+                    <div class="chart-placeholder-large">
+                        <i class="fas fa-chart-bar" style="font-size: 4rem; margin-bottom: 1rem;"></i>
+                        <p>Income vs Expenses Bar Chart</p>
+                        <div class="chart-legend">
+                            <div class="legend-item">
+                                <div class="legend-color" style="background-color: #4cc9f0;"></div>
+                                <span>Income</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color" style="background-color: #f72585;"></div>
+                                <span>Expenses</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="chart-stats">
+                        <div class="chart-stat">
+                            <div class="stat-label">Total Income</div>
+                            <div class="stat-value income">₹2,570</div>
+                        </div>
+                        <div class="chart-stat">
+                            <div class="stat-label">Total Expenses</div>
+                            <div class="stat-value expense">₹1,870</div>
+                        </div>
+                        <div class="chart-stat">
+                            <div class="stat-label">Net Balance</div>
+                            <div class="stat-value positive">₹700</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Expense Categories Chart -->
+                <div class="chart-card">
+                    <div class="card-header">
+                        <h2 class="card-title">Expense Categories</h2>
+                        <div class="chart-period">December 2025</div>
+                    </div>
+                    
+                    <div class="chart-placeholder-large">
+                        <i class="fas fa-chart-pie" style="font-size: 4rem; margin-bottom: 1rem;"></i>
+                        <p>Expense Categories Pie Chart</p>
+                        <div class="chart-legend">
+                            <div class="legend-item">
+                                <div class="legend-color" style="background-color: #4361ee;"></div>
+                                <span>Food & Dining</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color" style="background-color: #7209b7;"></div>
+                                <span>Shopping</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color" style="background-color: #4cc9f0;"></div>
+                                <span>Transportation</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color" style="background-color: #f8961e;"></div>
+                                <span>Entertainment</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="category-list">
+                        <div class="category-item">
+                            <div class="category-name">Food & Dining</div>
+                            <div class="category-amount">₹620</div>
+                            <div class="category-percentage">33%</div>
+                        </div>
+                        <div class="category-item">
+                            <div class="category-name">Shopping</div>
+                            <div class="category-amount">₹450</div>
+                            <div class="category-percentage">24%</div>
+                        </div>
+                        <div class="category-item">
+                            <div class="category-name">Transportation</div>
+                            <div class="category-amount">₹380</div>
+                            <div class="category-percentage">20%</div>
+                        </div>
+                        <div class="category-item">
+                            <div class="category-name">Entertainment</div>
+                            <div class="category-amount">₹250</div>
+                            <div class="category-percentage">13%</div>
+                        </div>
+                        <div class="category-item">
+                            <div class="category-name">Other</div>
+                            <div class="category-amount">₹170</div>
+                            <div class="category-percentage">9%</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Monthly Trend Chart -->
+                <div class="chart-card">
+                    <div class="card-header">
+                        <h2 class="card-title">Monthly Trends</h2>
+                        <div class="chart-period">2025</div>
+                    </div>
+                    
+                    <div class="chart-placeholder-large">
+                        <i class="fas fa-chart-line" style="font-size: 4rem; margin-bottom: 1rem;"></i>
+                        <p>Monthly Income & Expenses Trend Line Chart</p>
+                        <div class="chart-legend">
+                            <div class="legend-item">
+                                <div class="legend-color" style="background-color: #4cc9f0;"></div>
+                                <span>Income</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color" style="background-color: #f72585;"></div>
+                                <span>Expenses</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color" style="background-color: #4361ee;"></div>
+                                <span>Savings</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="trend-stats">
+                        <div class="trend-stat">
+                            <div class="stat-label">Avg Monthly Income</div>
+                            <div class="stat-value income">₹42,500</div>
+                        </div>
+                        <div class="trend-stat">
+                            <div class="stat-label">Avg Monthly Expenses</div>
+                            <div class="stat-value expense">₹32,800</div>
+                        </div>
+                        <div class="trend-stat">
+                            <div class="stat-label">Avg Monthly Savings</div>
+                            <div class="stat-value positive">₹9,700</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Budget vs Actual Chart -->
+                <div class="chart-card">
+                    <div class="card-header">
+                        <h2 class="card-title">Budget vs Actual Spending</h2>
+                        <div class="chart-period">December 2025</div>
+                    </div>
+                    
+                    <div class="chart-placeholder-large">
+                        <i class="fas fa-chart-area" style="font-size: 4rem; margin-bottom: 1rem;"></i>
+                        <p>Budget vs Actual Comparison Chart</p>
+                        <div class="chart-legend">
+                            <div class="legend-item">
+                                <div class="legend-color" style="background-color: #7209b7;"></div>
+                                <span>Budget</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color" style="background-color: #f8961e;"></div>
+                                <span>Actual</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="budget-comparison">
+                        <div class="comparison-item">
+                            <div class="comparison-category">Food & Dining</div>
+                            <div class="comparison-bar">
+                                <div class="budget-bar" style="width: 70%; background-color: #7209b7;"></div>
+                                <div class="actual-bar" style="width: 85%; background-color: #f8961e;"></div>
+                            </div>
+                            <div class="comparison-percentage">85%</div>
+                        </div>
+                        <div class="comparison-item">
+                            <div class="comparison-category">Transportation</div>
+                            <div class="comparison-bar">
+                                <div class="budget-bar" style="width: 80%; background-color: #7209b7;"></div>
+                                <div class="actual-bar" style="width: 65%; background-color: #f8961e;"></div>
+                            </div>
+                            <div class="comparison-percentage">65%</div>
+                        </div>
+                        <div class="comparison-item">
+                            <div class="comparison-category">Entertainment</div>
+                            <div class="comparison-bar">
+                                <div class="budget-bar" style="width: 60%; background-color: #7209b7;"></div>
+                                <div class="actual-bar" style="width: 90%; background-color: #f8961e;"></div>
+                            </div>
+                            <div class="comparison-percentage">90%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Insights Card -->
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">Financial Insights</h2>
+                </div>
+                
+                <div class="insights-grid">
+                    <div class="insight-card positive">
+                        <div class="insight-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <div class="insight-details">
+                            <h3>Great Job!</h3>
+                            <p>You've saved 23% more this month compared to last month.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="insight-card warning">
+                        <div class="insight-icon">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </div>
+                        <div class="insight-details">
+                            <h3>Budget Alert</h3>
+                            <p>Entertainment spending is 30% over budget this month.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="insight-card info">
+                        <div class="insight-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <div class="insight-details">
+                            <h3>Tip of the Day</h3>
+                            <p>Consider reducing dining out expenses to increase savings by 15%.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="insight-card success">
+                        <div class="insight-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="insight-details">
+                            <h3>Positive Trend</h3>
+                            <p>Your net worth has increased by 8% over the last 3 months.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+</body>
+</html>
